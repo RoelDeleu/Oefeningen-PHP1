@@ -1,4 +1,5 @@
 <?php
+
 $student =	array(
     "voornaam" =>  "Jan",
     "naam" =>  "Janssens",
@@ -8,15 +9,18 @@ $student =	array(
     "gemeente" =>  "Mechelen",
     "geboortedatum" =>  "14/05/1991",
     "telefoon" =>  "015 24 24 26",
-    "e-mail" =>  "jan.janssens@gmail.com"
-);
+    "e-mail" =>  "jan.janssens@gmail.com");
 
-StudentToTable($student);
+
 
 function StudentToTable($student) {
-    echo "<h1>Student</h1><table>";
+    echo "<h1>Student</h1>";
+    echo "<table>";
     foreach($student as $key => $val) {
         echo "<tr><td>".ucfirst($key)."</td><td>$val</td></tr>";
     }
     echo "</table>";
 }
+
+
+StudentToTable($student);

@@ -17,21 +17,25 @@
 
 <div class="container">
     <div class="row">
-        <?php
-        $images = array("stad1"=>"Amsterdam", "stad2"=>"New York", "stad3"=>"Barcelona");
 
-        function imagesincolumns($imagescity){
-            foreach($imagescity as $image => $city){
-                echo "<div class='col-sm-4'>";
-                echo "<h3>$city</h3>";
-                echo "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>";
-                echo "<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>";
-                echo "<img width='100%' height='180px' src='images/$image.jpg' alt='photokes'></img>";
-                echo "</div>";
-            }
+        <?php
+
+        $images = array( "imglonden.jpg", "imgparijs.jpg", "imgberlijn.jpg");
+        $count = 0;
+
+        foreach ( $images as $image )
+        {
+            $count++;
+            $link_img = "img/$image";
+            print '<div class="col-sm-4">';
+            print '<h3>Column ' . $count . '</h3>';
+            print '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>';
+            print '<img class="img-fluid" src="' . $link_img . '">';
+            print '</div>' ;
         }
-        echo imagesincolumns($images);
+
         ?>
+
     </div>
 </div>
 
