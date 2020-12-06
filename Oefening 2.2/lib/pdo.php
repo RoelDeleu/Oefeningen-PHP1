@@ -3,7 +3,7 @@ function GetData( $sql )
 {
     $servername = "localhost";
     $username = "root";
-    $password = "Gsm0488436796";
+    $password = "x";
     $dbname = "steden";
 
     try {
